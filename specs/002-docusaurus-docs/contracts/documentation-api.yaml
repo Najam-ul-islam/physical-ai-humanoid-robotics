@@ -1,0 +1,90 @@
+# Documentation API Contracts
+
+## Document Management API
+
+### GET /api/documents/{module}/{docId}
+Retrieve a specific documentation document.
+
+**Path Parameters:**
+- module: string - The module identifier (e.g., "module-1", "module-2")
+- docId: string - The document identifier
+
+**Response:**
+```
+{
+  "id": "string",
+  "title": "string",
+  "content": "string (markdown)",
+  "sidebar_label": "string",
+  "description": "string",
+  "module": "string",
+  "previous_doc": "string (optional)",
+  "next_doc": "string (optional)"
+}
+```
+
+### GET /api/modules
+Retrieve all available modules.
+
+**Response:**
+```
+{
+  "modules": [
+    {
+      "id": "string",
+      "name": "string",
+      "description": "string",
+      "doc_count": "number",
+      "order": "number"
+    }
+  ]
+}
+```
+
+### GET /api/navigation
+Retrieve the complete navigation structure.
+
+**Response:**
+```
+{
+  "sidebar": {
+    "module-1": {
+      "type": "category",
+      "label": "string",
+      "items": ["array of doc IDs or nested categories"]
+    }
+  }
+}
+```
+
+## Search API
+
+### POST /api/search
+Search documentation content.
+
+**Request Body:**
+```
+{
+  "query": "string",
+  "filters": {
+    "module": "string (optional)",
+    "tags": ["array of strings (optional)"]
+  }
+}
+```
+
+**Response:**
+```
+{
+  "results": [
+    {
+      "id": "string",
+      "title": "string",
+      "module": "string",
+      "url": "string",
+      "excerpt": "string"
+    }
+  ],
+  "total": "number"
+}
+```

@@ -1,0 +1,107 @@
+openapi: 3.0.0
+info:
+  title: Physical AI & Humanoid Robotics Documentation Standard
+  description: API specification for documentation content standards and validation
+  version: 1.0.0
+
+paths: {}
+
+components:
+  schemas:
+    DocumentationFile:
+      type: object
+      required:
+        - id
+        - title
+        - content
+        - frontmatter
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the documentation file
+          example: "module-1-introduction"
+        title:
+          type: string
+          description: Title of the documentation
+          example: "Module 1: Introduction to Physical AI"
+        content:
+          type: string
+          description: Markdown content of the documentation
+        frontmatter:
+          $ref: '#/components/schemas/Frontmatter'
+        module:
+          type: string
+          description: Module this documentation belongs to
+          example: "module-1"
+        authors:
+          type: array
+          items:
+            type: string
+          description: List of authors for the documentation
+        tags:
+          type: array
+          items:
+            type: string
+          description: Tags for categorization and search
+
+    Frontmatter:
+      type: object
+      required:
+        - sidebar_label
+        - title
+      properties:
+        sidebar_label:
+          type: string
+          description: Label used in sidebar navigation
+          example: "Introduction"
+        title:
+          type: string
+          description: Title of the document
+          example: "Module 1 Introduction"
+        description:
+          type: string
+          description: Optional description for SEO
+        tags:
+          type: array
+          items:
+            type: string
+          description: Optional tags for categorization
+        authors:
+          type: array
+          items:
+            type: string
+          description: Optional list of authors
+        date:
+          type: string
+          format: date
+          description: Optional date in YYYY-MM-DD format
+        draft:
+          type: boolean
+          description: Whether document is a draft, defaults to false
+
+    Module:
+      type: object
+      required:
+        - id
+        - name
+        - description
+      properties:
+        id:
+          type: string
+          description: Unique identifier for the module
+          example: "module-1"
+        name:
+          type: string
+          description: Name of the curriculum module
+          example: "Physical AI & Robotics Fundamentals"
+        description:
+          type: string
+          description: Brief description of the module
+        documents:
+          type: array
+          items:
+            $ref: '#/components/schemas/DocumentationFile'
+        order:
+          type: integer
+          description: Order in which the module appears in navigation
+          example: 1

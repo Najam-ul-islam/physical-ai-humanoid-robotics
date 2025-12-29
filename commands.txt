@@ -1,0 +1,6 @@
+# Install claude-code-router and claude code
+npm install -g @anthropic-ai/claude @musistudio/claude-code-router
+# specify+ package installation
+    uv tool install specifyplus
+# docusaurus package(we can create a project using claude)
+    npx create-docusaurus my-website classic
