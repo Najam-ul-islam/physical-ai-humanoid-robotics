@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch --all --prune)",
+      "Bash(.specify/scripts/bash/create-new-feature.sh --json \"==================================================\nModule 2: Digital Twins & Physical Simulation\n==================================================\n\nModule goal:\nDemonstrate how simulation enables safe, scalable robotics development.\n\n\n\nChapter 1: Physics Simulation with Gazebo\n- Gravity, collisions, dynamics\n- Environment modeling\nOutcome: Reader understands why physics simulation is critical\n\nChapter 2: Sensor Simulation\n- LiDAR, depth cameras, IMUs\n- Noise and realism\nOutcome: Reader can explain simulated perception pipelines\n\nChapter 3: Human–Robot Interaction & Unity\n- High-fidelity rendering\n- Interaction scenarios\nOutcome: Reader understands the role of visual realism and interaction testing\" --number 1 --short-name \"digital-twins-simulation\")",
+      "Bash(cp \"D:/Hackathon-1-Book-2025/specs/001-digital-twins-simulation/spec.md\" \"D:/Hackathon-1-Book-2025/specs/001-digital-twins-simulation/spec.md.bak\")",
+      "Bash(.specify/scripts/bash/create-phr.sh --title \"Create Digital Twins Simulation Spec\" --stage spec --feature 001-digital-twins-simulation --json)",
+      "Bash(.specify/scripts/bash/create-new-feature.sh --json \"==================================================\nModule 3: The AI–Robot Brain \\(NVIDIA Isaac\\)\n==================================================\n\nModule goal:\nIntroduce advanced perception, navigation, and training for humanoid robots.\n\n \n\nChapter 1: Photorealistic Simulation & Synthetic Data\n- NVIDIA Isaac Sim\n- Synthetic data generation\nOutcome: Reader understands data generation for robotics AI\n\nChapter 2: Perception & Localization\n- Isaac ROS\n- Visual SLAM \\(VSLAM\\)\nOutcome: Reader can explain robot localization and mapping\n\nChapter 3: Navigation & Motion Planning\n- Nav2\n- Path planning for humanoid movement\nOutcome: Reader understands navigation in dynamic environments\" --number 1 --short-name \"ai-robot-brain-nvidia\")",
+      "Bash(.specify/scripts/bash/create-phr.sh --title \"Create AI Robot Brain NVIDIA Isaac Spec\" --stage spec --feature 001-ai-robot-brain-nvidia --json)",
+      "Bash(.specify/scripts/bash/create-new-feature.sh --json \"==================================================\nModule 4: Vision–Language–Action \\(VLA\\) Systems\n==================================================\n\nModule goal:\nExplain how language, vision, and action converge into autonomous humanoid behavior.\n\n\nChapter 1: Voice-to-Intent\n- Speech-to-text \\(e.g., Whisper-style models\\)\n- Intent extraction\nOutcome: Reader understands voice-driven robot commands\n\nChapter 2: Cognitive Planning with LLMs\n- Natural language to action sequences\n- Task decomposition\nOutcome: Reader can explain LLM-based robot planning\n\nChapter 3: Capstone – The Autonomous Humanoid\n- End-to-end pipeline:\n  voice → plan → navigate → perceive → manipulate\nOutcome: Reader can conceptually trace full humanoid autonomy\" --number 1 --short-name \"vla-systems\")",
+      "Bash(.specify/scripts/bash/create-phr.sh --title \"Create VLA Systems Spec\" --stage spec --feature 001-vla-systems --json)",
+      "Bash(.specify/scripts/bash/setup-plan.sh --json)",
+      "Bash(.specify/scripts/bash/create-phr.sh --title \"Plan Docusaurus Documentation Framework\" --stage plan --feature 002-docusaurus-docs --json)",
+      "Bash(.specify/scripts/bash/create-phr.sh --title \"Plan Module 1 ROS 2 Documentation\" --stage plan --feature 002-docusaurus-docs --json)",
+      "Bash(.specify/scripts/bash/create-phr.sh --title \"Plan Module 2 Digital Twins Documentation\" --stage plan --feature 002-docusaurus-docs --json)",
+      "Bash(.specify/scripts/bash/create-phr.sh --title \"Plan Module 3 AI Robot Brain Documentation\" --stage plan --feature 002-docusaurus-docs --json)",
+      "Bash(.specify/scripts/bash/create-phr.sh --title \"Plan Module 4 VLA Systems Documentation\" --stage plan --feature 002-docusaurus-docs --json)",
+      "Bash(mkdir -p \"D:/Hackathon-1-Book-2025/specs/002-docusaurus-docs/contracts\")",
+      "Skill(sp.tasks)",
+      "Bash(.specify/scripts/bash/check-prerequisites.sh --json)",
+      "Bash(cat \"D:/Hackathon-1-Book-2025/physical-ai-book/sidebars.ts\")",
+      "Skill(sp.phr)",
+      "Bash(.specify/scripts/bash/create-phr.sh --title \"Implement Module 1 Docusaurus Documentation\" --stage green --json)",
+      "Skill(sp.implement)",
+      "Bash(git add .)"
+    ]
+  }
+}
