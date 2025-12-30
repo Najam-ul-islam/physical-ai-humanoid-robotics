@@ -22,8 +22,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "your-org", // Usually your GitHub org/user name.
-  projectName: "physical-ai-robotics", // Usually your repo name.
+  organizationName: "Najam-ul-islam", // Usually your GitHub org/user name.
+  projectName: "physical-ai-humanoid-robotics", // Usually your repo name.
 
   onBrokenLinks: "throw",
 
@@ -44,7 +44,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/your-org/physical-ai-robotics/edit/main/physical-ai-book/",
+            "https://github.com/Najam-ul-islam/physical-ai-humanoid-robotics/edit/main/physical-ai-book/",
         },
         blog: {
           showReadingTime: true,
@@ -55,7 +55,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/your-org/physical-ai-robotics/edit/main/physical-ai-book/",
+            "https://github.com/Najam-ul-islam/physical-ai-humanoid-robotics/edit/main/physical-ai-book/",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -77,7 +77,7 @@ const config: Config = {
     navbar: {
       title: "Physical AI & Humanoid Robotics",
       logo: {
-        alt: "Physical AI Logo",
+        alt: "Physical AI & Humanoid Robotics Logo",
         src: "img/logo.svg",
       },
       items: [
@@ -85,11 +85,25 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "docsSidebar",
           position: "left",
-          label: "Documentation",
+          label: "Browse Book",
         },
-        { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/your-org/physical-ai-robotics",
+          to: "/docs/module-1/ros2-fundamentals",
+          label: "Module 1",
+          position: "left",
+        },
+        {
+          to: "/docs/module-2/physics-simulation-gazebo",
+          label: "Module 2",
+          position: "left",
+        },
+        {
+          to: "/docs/module-3/perception-localization",
+          label: "Module 3",
+          position: "left",
+        },
+        {
+          href: "https://github.com/Najam-ul-islam/physical-ai-humanoid-robotics",
           label: "GitHub",
           position: "right",
         },
@@ -99,46 +113,58 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Book Modules",
           items: [
             {
-              label: "Introduction",
-              to: "/docs/intro",
+              label: "Module 1: ROS2 & Robot Control",
+              to: "/docs/module-1/ros2-fundamentals",
+            },
+            {
+              label: "Module 2: Simulation & Perception",
+              to: "/docs/module-2/physics-simulation-gazebo",
+            },
+            {
+              label: "Module 3: Navigation & Planning",
+              to: "/docs/module-3/perception-localization",
             },
           ],
         },
         {
-          title: "Community",
+          title: "Resources",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/robotics",
+              label: "Research Papers",
+              href: "/docs/module-4/cognitive-planning-llms",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/humanoid-robotics",
+              label: "Simulation Tools",
+              href: "/docs/module-2/physics-simulation-gazebo",
             },
             {
-              label: "X",
-              href: "https://x.com/physical_ai",
+              label: "Hardware Specifications",
+              href: "/docs/module-1/urdf",
             },
           ],
         },
         {
-          title: "More",
+          title: "Connect",
           items: [
             {
-              label: "Blog",
-              to: "/blog",
+              label: "GitHub Repository",
+              href: "https://github.com/Najam-ul-islam/physical-ai-humanoid-robotics",
             },
             {
-              label: "GitHub",
-              href: "https://github.com/your-org/physical-robotics",
+              label: "Robotics Community",
+              href: "https://forum.humanoid-robotics.org",
+            },
+            {
+              label: "Academic Resources",
+              href: "https://physical-ai.academia.edu",
             },
           ],
         },
       ],
-      copyright: `Copyright © 2025 Physical AI & Humanoid Robotics Project. Built with Docusaurus.`,
+      copyright: `Copyright © 2025 Physical AI & Humanoid Robotics Book. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,

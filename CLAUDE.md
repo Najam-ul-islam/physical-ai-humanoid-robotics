@@ -211,3 +211,7 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 
 ## Recent Changes
 - 002-docusaurus-docs: Added [if applicable, e.g., PostgreSQL, CoreData, files or N/A]
+
+## Active Technologies
+- JavaScript/TypeScript, Docusaurus v3.x + Docusaurus framework, React, Node.js, CSS/SCSS (001-docusaurus-ui-upgrade)
+- N/A (static site generation, no database required) (001-docusaurus-ui-upgrade)

@@ -22,7 +22,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
-            Najam Ul Islam Tutorial - 5min ⏱️
+            Start Reading the Book
           </Link>
         </div>
       </div>

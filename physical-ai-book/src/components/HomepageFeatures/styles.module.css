@@ -5,7 +5,37 @@
   width: 100%;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.featureBox {
+  background-color: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s ease;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.featureBox:hover {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-primary-dark);
+}
+
+.featureBox:hover h3,
+.featureBox:hover p {
+  color: white;
+}
+
+.featureTitle {
+  margin-bottom: 1rem;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.featureDescription {
+  margin-bottom: 0;
+  color: inherit;
+  transition: color 0.3s ease;
 }
